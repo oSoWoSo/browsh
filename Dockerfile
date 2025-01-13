@@ -14,7 +14,8 @@ RUN install_packages \
       pkg-config \
       libprotobuf-dev \
       make \
-      bzip2
+      bzip2 \
+      golang-go
 
 # Helper scripts
 WORKDIR /build
