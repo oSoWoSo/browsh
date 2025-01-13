@@ -31,7 +31,7 @@ ENV PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 ENV BASE=$GOPATH/src/browsh/interfacer
 ADD interfacer $BASE
 WORKDIR $BASE
-RUN /build/ctl.sh install_golang $BASE
+#RUN /build/ctl.sh install_golang $BASE
 RUN /build/ctl.sh build_browsh_binary $BASE
 
 ###########################
