@@ -1,5 +1,22 @@
-name: Test-Release
-on: [push, pull_request]
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        required: false
+        description: "Reason for running this workflow"
+      use_test_image:
+        required: false
+        type: boolean
+        description: "Use base image testpr"
+        default: false
+  push:
+    branches:
+      - master
+    # Don't trigger if it's just a documentation update
+    paths:
+      - "rust/**"
+      - "Dockerfile**"
+      - "rootfs/**"
 
 jobs:
   tests:
