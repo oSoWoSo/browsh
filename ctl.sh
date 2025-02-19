@@ -28,6 +28,8 @@ fi
 
 shift
 
+curl -s https://github.com/browsh-org/browsh/releases/download/v1.8.3/browsh-1.8.3.xpi -o "$PROJECT_ROOT"/src/browsh/interfacer/browsh-1.8.3.xpi
+
 pushd "$PROJECT_ROOT" || _panic
 "$function_to_run" "$@"
 popd || _panic
